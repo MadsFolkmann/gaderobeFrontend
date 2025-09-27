@@ -26,9 +26,9 @@ export const NavBar = () => {
               alt="Wardrobe Logo"
               className="h-12 w-12 rounded-full border border-gray-400"
             />
-            <span className="text-2xl md:text-3xl font-['Kranky']">
+            <NavLink to="/" className="text-2xl md:text-3xl font-['Kranky']">
               THE WARDROBE
-            </span>
+            </NavLink>
           </div>
 
           <div className="hidden md:flex gap-15 text-xl font-medium ml-6">
