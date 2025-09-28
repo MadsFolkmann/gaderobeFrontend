@@ -3,7 +3,7 @@ import { NavBar } from './Components/NavBar';
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout.tsx";
 import Home from "./pages/Home";
-import Wardrobe from "./pages/MyWardobe";
+import Wardrobe from "./pages/MyWardrobe.tsx";
 import AddClothing from "./pages/AddClothing";
 // import TryOn from "./pages/TryOn";
 
