@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/wardrobe_logo.png";
-import { AuthButton } from "./AuthButton";
+import { AuthButton } from "../components/AuthButton.tsx";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export const NavBar = () => {
