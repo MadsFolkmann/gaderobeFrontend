@@ -1,7 +1,7 @@
 {
   "name": "gaderobe_frontend",
   "private": true,
-  "homepage": "https://https://madsfolkmann.github.io/gaderobe_frontend/",
+  "homepage": "https://madsfolkmann.github.io/gaderobe_frontend/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

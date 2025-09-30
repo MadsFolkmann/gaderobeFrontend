@@ -12,8 +12,9 @@ return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="wardrobe" element={<Wardrobe />} />
-        <Route path="add" element={<AddClothing />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/wardrobe" element={<Wardrobe />} />
+        <Route path="/add" element={<AddClothing />} />
         {/* <Route path="try-on" element={<TryOn />} /> */}
       </Route>
     </Routes>
