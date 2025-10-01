@@ -21,11 +21,7 @@ export const NavBar = () => {
         {/* Logo + Titel */}
         <div className="flex items-center gap-18">
           <div className="flex items-center gap-2">
-            <img
-              src={logo}
-              alt="Wardrobe Logo"
-              className="h-12 w-12 rounded-full border border-gray-400"
-            />
+            <img src={logo} alt="Wardrobe Logo" className="h-12 w-12 rounded-full border border-gray-400" />
             <NavLink to="/" className="text-2xl md:text-3xl font-['Kranky']">
               THE WARDROBE
             </NavLink>
@@ -34,31 +30,17 @@ export const NavBar = () => {
           <div className="hidden md:flex gap-15 text-xl font-medium ml-6">
             {links.map((link) =>
               link.disabled ? (
-                <span
-                  key={link.label}
-                  className="text-gray-400 cursor-not-allowed"
-                >
+                <span key={link.label} className="text-gray-400 cursor-not-allowed">
                   {link.label}
                 </span>
               ) : (
-                <NavLink
-                  key={link.label}
-                  to={link.href}
-                  className={({ isActive }) =>
-                    `group transition duration-300 ${
-                      isActive ? "text-black" : "text-gray-800"
-                    }`
-                  }
-                  end
-                >
-                  {link.label}
-                  <span
-                    className={`block transition-all duration-500 h-0.5 bg-black ${
-                      window.location.pathname === link.href
-                        ? "max-w-full"
-                        : "max-w-0 group-hover:max-w-full"
-                    }`}
-                  ></span>
+                <NavLink key={link.label} to={link.href} end className="group relative transition duration-300">
+                  {({ isActive }) => (
+                    <>
+                      <span className={isActive ? "text-black" : "text-gray-800"}>{link.label}</span>
+                      <span className={`mt-0.5 block h-0.5 bg-black transition-all duration-500 ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} />
+                    </>
+                  )}
                 </NavLink>
               )
             )}
@@ -68,15 +50,8 @@ export const NavBar = () => {
         {/* Auth Button + Burger */}
         <div className="flex items-center gap-4">
           <AuthButton isLoggedIn={isLoggedIn} />
-          <button
-            className="md:hidden p-2 rounded hover:bg-gray-200"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? (
-              <XMarkIcon className="h-6 w-6 text-gray-800" />
-            ) : (
-              <Bars3Icon className="h-6 w-6 text-gray-800" />
-            )}
+          <button className="md:hidden p-2 rounded hover:bg-gray-200" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <XMarkIcon className="h-6 w-6 text-gray-800" /> : <Bars3Icon className="h-6 w-6 text-gray-800" />}
           </button>
         </div>
       </div>
@@ -93,11 +68,7 @@ export const NavBar = () => {
               <NavLink
                 key={link.label}
                 to={link.href}
-                className={({ isActive }) =>
-                  `block hover:underline w-full ${
-                    isActive ? "font-bold text-black" : ""
-                  }`
-                }
+                className={({ isActive }) => `block hover:underline w-full ${isActive ? "font-bold text-black" : ""}`}
                 onClick={() => setIsOpen(false)}
                 end
               >
