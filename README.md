@@ -1,5 +1,7 @@
 # THE WARDROBE 
 
+Deployed frontend: https://madsfolkmann.github.io/gaderobeFrontend/#/
+
 A web app for digitally visualizing your wardrobe
 
 Backend is under development, so this is not the final app yet
